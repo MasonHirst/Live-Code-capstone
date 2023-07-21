@@ -14,7 +14,6 @@ export async function getUser() {
       ? 'http://localhost:8080/'
       : document.location.origin
   axios.defaults.baseURL = serverUrl
-  console.log(serverUrl)
   const { data } = await api.get(`${serverUrl}accounts/users`)
   return data
 }
